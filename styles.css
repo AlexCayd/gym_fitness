@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bungee&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+    --primario: #ff7b00;
+    --secundario: #ffdd00;
+    --blanco: #ffffff;
+    --negro: #000;
+
+    --fuentePrimaria: 'Kdam Thmor Pro', sans-serif;;
+    --fuenteSecundaria: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuenteSecundaria);
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+section {
+    margin-top: 35px;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuentePrimaria);
+    color: var(--secundario);
+}
+
+a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.contenedor {
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--primario);
+    font-family: var(--fuentePrimaria);
+    color: #000;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        padding: 15px 45px;
+    }
+}
+
+.boton:hover {
+    background-color: var(--secundario);
+}
+
+.titulo {
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        text-align: left;
+    }
+}
+
+.descripcion {
+    margin-bottom: 30px;
+}
+
+/* HERO */
+
+.hero {
+    background-image: url(img/hero.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-position: right center;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
+}
+
+.hero__contenido {
+    margin: 35px;
+    padding: 35px 20px;
+    border: 5px solid var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .hero__contenido {
+        padding: 85px 60px;
+    }
+}
+
+.hero__mascara {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__apertura {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--primario);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .hero__apertura {
+        margin-bottom: 45px;
+        font-size: 32px;
+        text-align: left;
+    }
+}
+
+.hero__logo {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .hero__logo {
+        font-size: 88px;
+        text-align: left;
+    }
+}
+
+.degradado {
+    color: transparent;
+    background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 10%, var(--primario) 70%, var(--secundario) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero__boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+    padding: 20px 10px;
+    max-width: 100%;
+    transition: .4s all;
+}
+
+.header.pined {
+    position: fixed;
+    top: 0px;
+    width: 95%;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 20px 35px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__contenedor {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navegacion {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        justify-content: left;
+        gap: 40px;
+    }
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrimaria);
+    color: #000;
+    transition: .4s all;
+}
+
+.navegacion__enlace:hover {
+    font-weight: bold;
+}
+
+.logo {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        display: block;
+        font-weight: bold;
+        font-size: 24px;
+        color: var(--negro);
+    }
+}
+
+/* SERVICIOS */
+.servicios {
+    margin-top: 50px;
+}
+
+.servicios__grid {
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .servicios__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.servicio__icono {
+    height: 150px;
+    width: 150px;
+    background-color: var(--secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.servicio__icono:hover {
+    transform: scale(1.05);
+}
+
+.servicio i {
+    font-size: 78px;
+    color: var(--primario);
+}
+
+.servicio__titulo {
+    color: var(--blanco);
+}
+
+/* INSTRUCTORES */
+.instructores__grid {
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .instructores__grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 40px;
+    }
+}
+
+.instructor {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 15px;
+    border: 5px solid var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .instructor {
+        grid-template-columns: 1fr 3fr;
+    }
+}
+
+.instructor__estrellas {
+    height: 55px;
+}
+
+.instructor__texto {
+    padding: 25px 0;
+}
+
+.instructor__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* PARALLAX */
+.parallax {
+    height: 40vh;
+    background-image: url(img/gimnasio.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .parallax {
+        height: 60vh;
+    }
+}
+
+/* PLANES */
+.planes {
+    margin-top: 25px;
+}
+
+.nuestros-planes {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .nuestros-planes {
+        flex-direction: row;
+        max-width: 1250px;
+        margin-inline: auto;
+        margin-block-start: 110px;
+    }
+}
+
+.plan {
+    flex-grow: 1;
+    background-color: var(--primario);
+    padding: 30px 30px 30px 30px;
+    border-bottom: 1px solid var(--blanco);
+    display: flex;
+    flex-direction: column;
+    color: var(--negro);
+}
+
+@media (min-width: 768px) {
+    .plan {
+        border: none;
+        transition: transform .3s;
+    }
+
+    .plan:hover {
+        transform: scale(1.05);
+    }
+}
+
+.plan__titulo {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.plan__titulo::after {
+    content: '';
+    background-color: var(--secundario);
+    height: 10px;
+    width: calc(100% + 10px);
+    display: block;
+    margin: -5px 0 0 0;
+}
+
+.plan.premium .plan__titulo::after {
+    background-color: var(--primario);
+}
+
+.plan__precio {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.plan__listado li {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan__listado li:last-of-type {
+    margin-bottom: 30px;
+}
+
+.plan__boton {
+    display: flex;
+    justify-content: center;
+    background-color: var(--secundario);
+    border: 5px solid var(--secundario);
+    transition: all .4s;
+    margin-top: auto;
+}
+
+.plan__boton:hover {
+    background-color: var(--primario);
+}
+
+.plan.premium {
+    background-color: var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .plan.premium {
+        margin-top: -50px;
+        margin-bottom: -50px;
+        border-radius: 20px;
+        z-index: 2;
+    }
+}
+
+.plan.premium .plan__titulo {
+    color: var(--primario);
+}
+
+.plan.premium .plan__boton {
+    background-color: var(--primario);
+    border: 5px solid var(--primario);
+    margin-top: 0;
+}
+
+.plan.premium .plan__boton:hover {
+    background-color: var(--secundario);
+}
+
+/* HORARIOS */
+.horarios {
+    margin-top: 90px;
+}
+
+.horarios__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dia {
+    width: 120px;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    border: 5px solid var(--secundario);
+}
+
+@media (min-width: 768px) {
+    .dia {
+        width: 250px;
+        font-size: 22px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 70px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--secundario);
+    color: var(--negro);
+    font-weight: bold;
+}
